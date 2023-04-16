@@ -1,5 +1,4 @@
 #include <stdio.h>
-#include <math.h>
 #define MAX_LEN 100
 
 int main(void) {
@@ -12,7 +11,7 @@ int main(void) {
     printf("Enter Number (2): ");
     fgets(buffer, MAX_LEN, stdin);
     sscanf(buffer, "%lf", &num2);
-    printf("Enter Operator (+, -, *, /, ~): ");
+    printf("Enter Operator (+, -, *, /): ");
     fgets(buffer, MAX_LEN, stdin);
     sscanf(buffer, "%c", &operator);
     switch (operator) {
@@ -27,9 +26,6 @@ int main(void) {
             break;
         case '/':
             output = num1 / num2;
-            break;
-        case '~':
-            output = sqrt(num1 + num2);
             break;
         default:
             printf("Failure To Enter Operator!");
